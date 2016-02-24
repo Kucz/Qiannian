@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ScrollCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms4-eM-5mH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="ZkC-re-6Lu"/>
+                        </connections>
+                    </scrollView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4hn-Ne-0fm">
+                        <rect key="frame" x="141" y="153" width="39" height="37"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="e1P-6i-mSN"/>
+                        </constraints>
+                    </pageControl>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ms4-eM-5mH" secondAttribute="trailing" id="LrI-WJ-RbM"/>
+                <constraint firstAttribute="bottom" secondItem="4hn-Ne-0fm" secondAttribute="bottom" constant="10" id="MLA-nX-JfW"/>
+                <constraint firstItem="4hn-Ne-0fm" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XIi-I4-SCZ"/>
+                <constraint firstAttribute="bottom" secondItem="ms4-eM-5mH" secondAttribute="bottom" id="fPe-GP-lbo"/>
+                <constraint firstItem="ms4-eM-5mH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gcT-PM-dUm"/>
+                <constraint firstItem="ms4-eM-5mH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t1z-Nj-a7K"/>
+            </constraints>
+            <size key="customSize" width="201" height="50"/>
+            <connections>
+                <outlet property="MyScrollView" destination="ms4-eM-5mH" id="0kB-aV-XJe"/>
+                <outlet property="MypageView" destination="4hn-Ne-0fm" id="mOz-PX-XOc"/>
+            </connections>
+            <point key="canvasLocation" x="433" y="181"/>
+        </collectionViewCell>
+    </objects>
+</document>
